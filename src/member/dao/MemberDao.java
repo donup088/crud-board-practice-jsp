@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
+import jdbc.JdbcUtil;
 import member.model.Member;
 
 public class MemberDao {
@@ -20,11 +21,9 @@ public class MemberDao {
 			}
 			return member;
 		}finally {
-			if(rs!=null) {
-				rs.close();
+			JdbcUtil.close(rs);
 			}
 		}
-	}
 	
 	public void insert(Connection conn,Member member) throws SQLException {
 		try(PreparedStatement pstmt=conn.prepareStatement("insert into member values(?,?,?,?)")){

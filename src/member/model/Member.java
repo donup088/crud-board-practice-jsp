@@ -25,6 +25,8 @@ public class Member {
 	public Date getRegDate() {
 		return regDate;
 	}
-	
+	public boolean matchPassword(String pwd) {
+		return password.equals(pwd);
+	}
 	
 }
