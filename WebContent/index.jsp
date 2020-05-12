@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>회원제 게시판 예제</title>
+<title>회원제 게시판 </title>
 </head>
 <body>
 <c:if test="${!empty authUser}">
