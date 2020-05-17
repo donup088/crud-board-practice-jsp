@@ -12,6 +12,7 @@
 	<a href="logout.do">[로그아웃하기]</a><br>
 	<a href="changePwd.do">[암호변경하기]</a><br>
 	<a href="article/write.do">[게시글쓰기]</a>
+	<a href="article/list.do">[게시글목록보기]</a>
 </c:if>
 <c:if test="${empty authUser}">
 	<a href="join.do">[회원가입하기]</a>
