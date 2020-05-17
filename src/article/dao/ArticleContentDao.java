@@ -20,6 +20,13 @@ public class ArticleContentDao {
 			return null;
 		}
 	}
+	public void contentUpdate(Connection conn,int no,String content) throws SQLException {
+		try(PreparedStatement pstmt=conn.prepareStatement("update article_content set content=? where article_no=?");){
+			pstmt.setString(1, content);
+			pstmt.setInt(2, no);
+			pstmt.executeUpdate();
+		}
+	}
 	public ArticleContent selectById(Connection conn,int no) throws SQLException {
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
